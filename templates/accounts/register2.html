@@ -1,0 +1,13 @@
+<hr>
+<h1>REGISTRAR</h1>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	{% for campo in form %}
+		{{campo.label}}
+		{{campo}}
+		
+		
+	{% endfor %}
+	<input type="submit" name="Create user"  value="REGISTRAR">
+</form>

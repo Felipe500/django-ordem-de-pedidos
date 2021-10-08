@@ -1,0 +1,79 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+{% include 'accounts/status.html' %}
+
+
+
+<br>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-5">
+		<h5> CLIENTES: {{ total_Cliente }}</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Adicionar Cliente</a>
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Cliente</th>
+					<th>Celular</th>
+				</tr>
+
+			
+					{% for Cliente in Clientes %}
+					<tr>
+						<td><a class="btn btn-sm btn-info" href="{% url 'clientes' Cliente.id %}">Visualizar</a></td>
+						
+						<td>{{Cliente.name}}</td>
+						<td>{{Cliente.phone}}</td>
+					</tr>
+					{% endfor %}
+				
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>Ordens para entrega: {{ total_Pedidos }}</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Produtos</th>
+					<th>Data do Pedido</th>
+					<th>Status</th>
+					<th>Atualizar</th>
+					<th>Remover</th>
+				</tr>
+
+
+					{% for pedido in pedidos %}
+					<tr>
+						<td>{{pedido.product}}</td>
+						<td>{{pedido.date_created}}</td>
+						<td>{{pedido.status}}</td>
+				
+					
+					
+					
+						<td><a class="btn btn-sm btn-info" href="{% url 'atualiza_pedido' pedido.id %}">Atualizar</a></td>
+
+						<td><a class="btn btn-sm btn-danger" href="{% url 'remove_pedido'  pedido.id %}">Excluir</a></td>
+
+					</tr>
+					{% endfor %}
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,86 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+	<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Cliente:</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Atualizar Cliente</a>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="{% url 'novo_pedido' cliente.id %}">Adicionar pedido</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Informações para contato</h5>
+			<hr>
+			<p>Email: {{cliente.email}}</p>
+			<p>Phone: {{cliente.phone}}</p>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Total de Pedidos</h5>
+			<hr>
+			<h3 style="text-align: center;padding: 10px">{{order_count}}</h3>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+					{{myFilter.form}}
+		    <button class="btn btn-primary" type="submit">Pesquisar</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Produto</th>
+					<th>Anotação</th>
+					<th>Data do Pedido</th>
+					<th>Status</th>
+					<th>Atualizar</th>
+					<th>Remover</th>
+				</tr>
+
+				
+
+				{% for pedido in pedidos %}
+
+				<tr>
+					<td>{{pedido.product}}</td>
+					<td>{{pedido.note}}</td>
+					<td>{{pedido.date_created}}</td>
+					<td>{{pedido.status}}</td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'atualiza_pedido'  pedido.id %}">Atualizar</a></td>
+
+					<td><a class="btn btn-sm btn-danger" href="{% url 'remove_pedido'  pedido.id %}">Excluir</a></td>
+				</tr>
+				{% endfor %}
+				
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

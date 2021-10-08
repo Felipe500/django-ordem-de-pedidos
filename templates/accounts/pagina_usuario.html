@@ -1,0 +1,64 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+{% include 'accounts/status.html' %}
+
+
+{% csrf_token %}
+<br>
+
+
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+					{{myFilter.form.product}}
+					{{myFilter.form.status}}
+					{{myFilter.form.note}}
+				 <input type="date">	{{myFilter.form.date_created}} 
+		    <button class="btn btn-primary" type="submit">Pesquisar</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Produto</th>
+					<th>Anotação</th>
+					<th>Data do Pedido</th>
+					<th>Status</th>
+				
+				</tr>
+
+				
+
+				{% for pedido in pedidos %}
+
+				<tr>
+					<td>{{pedido.product}}</td>
+					<td>{{pedido.note}}</td>
+					<td>{{pedido.date_created}}</td>
+					<td>{{pedido.status}}</td>
+				
+				</tr>
+				{% endfor %}
+				
+
+			</table>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
