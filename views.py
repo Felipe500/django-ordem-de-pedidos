@@ -15,7 +15,7 @@ from django.contrib.auth.models import Group
 # Create your views here.
 from .forms import OrderForm, CreateUserForm, ClienteForm
 from .decorators import unauthenticated_user, allowed_users, admin_only
-
+#ola
 
 @unauthenticated_user
 def register_page(request):
