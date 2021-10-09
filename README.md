@@ -10,11 +10,11 @@ PIP INSTALL REQUIREMENTS:
     django-filter                     2.4.0 ( FILTROS)
     django-resized                    0.3.11 (OPCIONAL- AINDA VOU IMPLEMENTÁ-LO)
 
-TERMINAL - CMD:
+1° PASSO NO TERMINAL - CMD:
 
 
-    1 - django-admin startproject 'NOME_PROJETO'
-    2 - cd 'NOME_PROJETO'
+    1.1 - django-admin startproject 'NOME_PROJETO'
+    1.2 - cd 'NOME_PROJETO'
 
 # A sub-pasta do projeto NOME_PROJETO será a raíz para nosso site:
 
@@ -28,7 +28,7 @@ TERMINAL - CMD:
 
   O script manage.py é usado para criar aplicações, trabalhar com bancos de dados, e iniciar o webserver de desenvolvimento. 
 
-3 - Dentro da pasta do projeto faça um clone do app no github com o comando:  
+2 - Dentro da pasta do projeto('NOME_PROJETO') faça um clone do app no github com o comando:  
 
 
      git clone https://github.com/Felipe500/django-ordem-de-pedidos.git
