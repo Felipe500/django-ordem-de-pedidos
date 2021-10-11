@@ -18,7 +18,7 @@ class CreateUserForm(UserCreationForm):
 
 
 class ClienteForm(ModelForm):
-	content = forms.CharField(widget=CKEditorWidget())
+	#content = forms.CharField(widget=CKEditorWidget())
 	class Meta:
 		model = Cliente
 		fields = '__all__'
