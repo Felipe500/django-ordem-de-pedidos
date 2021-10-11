@@ -28,17 +28,61 @@ PIP INSTALL REQUIREMENTS:
 
   O script manage.py é usado para criar aplicações, trabalhar com bancos de dados, e iniciar o webserver de desenvolvimento. 
 
-2 - Dentro da pasta do projeto('NOME_PROJETO') faça um clone do app no github com o comando:  
+2 - Dentro da pasta do projeto('NOME_PROJETO') faça um clone do app no github com o seguinte comando e depois renomeie a pasta para 'accounts':  
 
-
+     #clonar repositório no github
      git clone https://github.com/Felipe500/django-ordem-de-pedidos.git
-
-
+     
+     #renomear a pasta
+     mv django-ordem-de-pedidos accounts
+   
+3 - Agora entre na pasta do projeto principal e procure o arquivo de configuração do django 'settings.py', e faça as seguintes alterações: 
+     
+     #cabeçalho do arquivo
+     import os
+    
+    #----------------------------
+    
      INSTALLED_APPS = [
     ***
-    'django-ordem-de-pedidos.apps.AccountsConfig',
+    'accounts.apps.AccountsConfig',
     'django_filters',
     'ckeditor'
     ***
     ]
+    
+    #--------------------------
+    
+    STATIC_URL = '/static/'
+
+    MEDIA_URL = '/images/'
+
+    STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+    ]
+
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+    
+4 - no arquivo urls, adicione as rotas para a aplicação 'accounts' e o caminho para os arquivos estaticos da aplicação:
+    
+    from django.contrib import admin
+    from django.urls import path, include
+
+    from django.conf.urls.static import static
+    from django.conf import settings
+
+
+    urlpatterns = [
+    path('admin/', admin.site.urls),
+     path('', include('accounts.urls')),
+    ]
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+5 - procure o arquivo manage.py e execute o terminal na pasta deste arquivo, e siga com os comandos para criar as tabelas do banco de dados e criação do 'super user', ou usuario admin:
+    
+    #criar banco de dados
+    python3 manage.py migrate
+    
+    #criar um usuario admin
+    python3 manage.py createsuperuser
     
