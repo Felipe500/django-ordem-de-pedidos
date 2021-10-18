@@ -33,11 +33,12 @@
       
     </div>
  
-    {% if request.user.is_staff %}
-   <span class="hello-msg">Olá,&nbsp; {{request.user}}</span>
-   {% else %}
-    <span class="hello-msg">Olá,&nbsp; {{request.user.cliente}}</span>
-    <span><a class="hello-msg" href="{% url 'perfil_usuario' %}">Configurar perfil</a></span>
-   {% endif %}
-      <span ><a  class="hello-msg" href="{% url 'logout' %}">&nbsp;Sair da conta</a></span>
+            {% if request.user.is_staff %}
+           <span class="hello-msg">Olá,&nbsp; {{request.user}}</span>
+           {% else %}
+            <span class="hello-msg">Olá,&nbsp; {{request.user.cliente}}</span>
+            <span><a class="hello-msg" href="{% url 'perfil_usuario' %}">Configurar perfil</a></span>
+           {% endif %}
+            <span ><a  class="hello-msg" href="{% url 'logout' %}">&nbsp;Sair da conta</a></span>
+  </div>
 </nav>
