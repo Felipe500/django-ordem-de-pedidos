@@ -13,27 +13,27 @@ Gerenciar ordens de pedidos para entregar ( origin : PERFIL DO CRIADOR DO CURSO 
 
 # LISTAGEM DE PRODUTOS
 
-![alt text]https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%202.png?raw=true)
+![alt text](https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%202.png?raw=true)
 
 
 # ADICIONAR PEDIDO DO CLIENTE AO SISTEMA
 
-![alt text]https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%205%20-%20adicionar%20pedido%20ao%20cliente.png?raw=true)
+![alt text](https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%205%20-%20adicionar%20pedido%20ao%20cliente.png?raw=true)
 
 
 # ATUALIZAR PEDIDO DO CLIENTE
 
-![alt text]https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%203.png?raw=true)
+![alt text](https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20admin%203.png?raw=true)
 
 
 # ARÉA DO CLIENTE
 # DASHBOARD - PAINEL DO CLIENTE
 
-![alt text]https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20cliente%20-%201.png?raw=true)
+![alt text](https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20cliente%20-%201.png?raw=true)
 
 
 # CONFIGURAR PERFIL DO CLIENTE
-![alt text]https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20cliente%20-%202%20PEFIL%20USUARIO.png?raw=true)
+![alt text](https://github.com/Felipe500/django-ordem-de-pedidos/blob/649e390cf9a872274390630229a845faf5042d19/tela%20cliente%20-%202%20PEFIL%20USUARIO.png?raw=true)
 
 # configuração do app
 PIP INSTALL REQUIREMENTS:
