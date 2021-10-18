@@ -7,10 +7,10 @@ from .models import Cliente
 
 def cliente_profile(sender, instance, created, **kwargs):
 	if created:
-		if not Group.objects.filter(name='cliente').exists():
-			print("criando grupo cliente")
-			Group.objects.create(nome='cliente')
-		group = Group.objects.get(name='cliente')
+		if not Group.objects.filter(name='usuario').exists():
+			print("criando grupo usuario")
+			Group.objects.create(nome='usuario')
+		group = Group.objects.get(name='usuario')
 		instance.groups.add(group)
 		Cliente.objects.create(
 			user=instance,
