@@ -1,6 +1,6 @@
 # django-ordem-de-pedidos
 Gerenciar ordens de pedidos para entregar ( origin : PERFIL DO CRIADOR DO CURSO NO YOUTUBE https://github.com/divanov11/crash-course-CRM )
-
+# Gerenciar ordens de pedidos para entregar. O admin do sistema recebe a lista de pedido para entrega para um certo cliente, e o cliente no mesmo sistema realiza uma consulta para saber como está o andamento da sua entrega de seu pedido.  
 
 # DASHBOARD DO ADMIN - PAINEL DE CONTROLE DE ORDEM DE PEDIDOS
 
